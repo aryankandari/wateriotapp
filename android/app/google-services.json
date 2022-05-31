@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "150631285246",
+    "firebase_url": "https://wateriotapp-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "wateriotapp",
+    "storage_bucket": "wateriotapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150631285246:android:77a4b8f8643524d3f940af",
+        "android_client_info": {
+          "package_name": "com.example.wateriotapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "150631285246-ebsoq2e27a71585qcpo99ljs409qp0i9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBy9a4OTzAriOkRkcjFcOJ0JhMcy-u5qxo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "150631285246-ebsoq2e27a71585qcpo99ljs409qp0i9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "150631285246-s1c37805crc2j8ep31e9cq3phgiitatb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.wateriotapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
