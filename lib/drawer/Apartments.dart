@@ -16,7 +16,7 @@ class _ApartmentsState extends State<ApartmentsPage> {
     return Scaffold(
       appBar: AppBar(
           title:
-              const Text('Water Level', style: TextStyle(color: Colors.black)),
+              const Text('APARTMENTS', style: TextStyle(color: Colors.black)),
           backgroundColor: Colors.blue),
       drawer: MyDrawer(),
     );
