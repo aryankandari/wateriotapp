@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unnecessary_import, unused_import
 import 'dart:ui';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -8,39 +7,39 @@ import 'WaterLevel.dart';
 import '../drawer.dart';
 
 final TextEditingController _newclassController = TextEditingController();
-final TextEditingController _classteachernameController =
+final TextEditingController _apartmentnameController =
     TextEditingController();
 final TextEditingController _startdateController = TextEditingController();
 final TextEditingController _enddateController = TextEditingController();
 
 addData() {
   Map<String, dynamic> data = {
-    "classteachername": _classteachernameController.text,
+    "apartmentname": _apartmentnameController.text,
     "newclass": _newclassController.text,
     "startdate_number": _startdateController.text,
     "enddate": _enddateController.text
   };
   CollectionReference collectionReference =
-      FirebaseFirestore.instance.collection('class');
+      FirebaseFirestore.instance.collection('apartment');
   collectionReference.add(data);
 }
 
 updateData() async {
   Map<String, dynamic> data = {
-    "classteachername": _classteachernameController.text,
+    "apartmentname": _apartmentnameController.text,
     "newclass": _newclassController.text,
     "startdate_number": _startdateController.text,
     "enddate": _enddateController.text
   };
   CollectionReference collectionReference =
-      FirebaseFirestore.instance.collection('class');
+      FirebaseFirestore.instance.collection('apartment');
   QuerySnapshot querySnapshot = await collectionReference.get();
   querySnapshot.docs[0].reference.update(data);
 }
 
 deleteData() async {
   CollectionReference collectionReference =
-      FirebaseFirestore.instance.collection('class');
+      FirebaseFirestore.instance.collection('apartment');
   QuerySnapshot querySnapshot = await collectionReference.get();
   querySnapshot.docs[0].reference.delete();
 }
@@ -67,7 +66,7 @@ class _ApartmentsState extends State<AddApartmentsPage> {
                   left: 15.0, right: 15.0, top: 0, bottom: 0),
               child: Flexible(
                 child: TextField(
-                    controller: _classteachernameController,
+                    controller: _apartmentnameController,
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'CLASS TEACHER NAME',
