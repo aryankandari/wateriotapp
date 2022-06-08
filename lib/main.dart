@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.blue[100],
+        scaffoldBackgroundColor: const Color.fromARGB(255, 181, 222, 255),
       ),
       home: const LoginPage(title: 'Student App'),
       debugShowCheckedModeBanner: false,
@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
 }
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key, required this.title}) : super(key: key);
+  const LoginPage({key key, this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -111,27 +111,29 @@ class _LoginPageState extends State<LoginPage> {
             child: Stack(
               children: <Widget>[
                 Container(
-                  padding: const EdgeInsets.only(top: 150, left: 20, right: 30),
+                  padding: const EdgeInsets.only(top: 120, left: 20, right: 30),
                   child: const Text(
-                    "WELCOME!",
-                    style: TextStyle(fontSize: 40, fontStyle: FontStyle.italic),
+                    "",
+                    style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
                   ),
                 )
               ],
             ),
           ),
           Container(
-            padding: const EdgeInsets.only(top: 100, left: 20, right: 30),
+            padding: const EdgeInsets.only(top: 40, left: 20, right: 30),
             child: Column(
               children: <Widget>[
                 (TextField(
                   controller: _emailController,
                   decoration: const InputDecoration(
-                      labelText: "Email",
-                      labelStyle: TextStyle(
-                          fontFamily: 'Montserrat', color: Colors.black),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.blue))),
+                    fillColor: Color.fromARGB(255, 6, 224, 253),
+                    filled: true,
+                    labelText: "EMAIL",
+                    hintText: 'ENTER YOUR EMAIL ID as ABC@XYZ.COM',
+                    labelStyle: TextStyle(
+                        fontFamily: 'Montserrat', color: Colors.black),
+                  ),
                 )),
                 const SizedBox(
                   height: 20,
@@ -139,11 +141,13 @@ class _LoginPageState extends State<LoginPage> {
                 TextField(
                   controller: _passwordController,
                   decoration: const InputDecoration(
-                      labelText: "Password",
-                      labelStyle: TextStyle(
-                          fontFamily: 'Montserrat', color: Colors.black),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.blue))),
+                    fillColor: Color.fromARGB(255, 6, 224, 253),
+                    filled: true,
+                    labelText: "PASSWORD",
+                    hintText: "ENTER YOUr PASSWORD",
+                    labelStyle: TextStyle(
+                        fontFamily: 'Montserrat', color: Colors.black),
+                  ),
                   obscureText: true,
                 ),
                 const SizedBox(
@@ -192,7 +196,7 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       child: const Center(
                         child: Text(
-                          'Login',
+                          'LOGIN',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -215,7 +219,7 @@ class _LoginPageState extends State<LoginPage> {
                         Navigator.of(context).pushNamed('/signup');
                       },
                       child: const Text(
-                        'Register',
+                        'REGISTER',
                         style: TextStyle(
                             color: Colors.blue,
                             fontFamily: 'Montserrat',
